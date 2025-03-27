@@ -21,12 +21,16 @@
             </div>
             <div class="col-md-6">
               <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
-                <a href="#" class="text-white text-decoration-none">Home</a>
-                <a href="#" class="text-white text-decoration-none">Acerca</a>
-                <a href="#" class="text-white text-decoration-none">Contacto</a>
-                <a href="#" class="text-white"><i class="fas fa-shopping-cart"></i></a>
-                <button class="btn btn-light btn-sm">Entrar</button>
-                <button class="btn btn-outline-light btn-sm">Registro</button>
+                <a href="inicio.html" class="text-white text-decoration-none">Home</a>
+                <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+                <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+                <a href="login.html">
+                  <button class="btn btn-light btn-sm">Iniciar Sesión</button>
+                </a>
+                
+                <a href="registro.html">
+                  <button class="btn btn-outline-light btn-sm">Registro</button>
+                </a>
               </nav>
             </div>
           </div>
@@ -88,8 +92,8 @@
   
       <div class="caracteristica text-center">
         <i class="fas fa-bolt fa-2x mb-2 text-success"></i>
-        <h5 class="fw-bold">🏅Calidad</h5>
-        <p>Llevamos a tu casa lo más fresco y nutritivo del mercado</p>
+        <h5 class="fw-bold">Calidad</h5>
+        <p>🏅Llevamos a tu casa lo más fresco y nutritivo del mercado</p>
       </div>
   
       <div class="caracteristica text-center">
@@ -106,8 +110,8 @@
   
       <div class="caracteristica text-center">
         <i class="fas fa-shield-alt fa-2x mb-2 text-success"></i>
-        <h5 class="fw-bold">⏱️Puntualidad</h5>
-        <p>Seguimiento en tiempo real de tu pedido</p>
+        <h5 class="fw-bold">Puntualidad</h5>
+        <p>⏱️Seguimiento en tiempo real de tu pedido</p>
       </div>
   
     </div>
@@ -116,12 +120,26 @@
 </div>
       
           <!-- subtitulo para ofertas flash -->
-<h3 class="titulo-ofertas">Ofertas Flash</h3>
+<h2 class="titulo-ofertas">Ofertas Flash</h2>
+ <!-- Contador de tiempo -->
+ <div class="contador-oferta d-flex justify-content-center gap-3 mb-4">
+  <div class="cuadro-contador text-center">
+    <span id="horas">00</span>
+    <div class="label">HORAS</div>
+  </div>
+  <div class="cuadro-contador text-center">
+    <span id="minutos">00</span>
+    <div class="label">MINUTOS</div>
+  </div>
+  <div class="cuadro-contador text-center">
+    <span id="segundos">00</span>
+    <div class="label">SEGUNDOS</div>
+  </div>
+</div>
 
 <!-- OFERTAS FLASH -->
-<section class="fondo-ofertas text-white py-2">
-    <div class="container-fluid px-0">
-      <div class="row justify-content-center g-3 mx-0">
+<section class="fondo-ofertas text-white py-4">
+  <div class="row justify-content-center g-4 mx-0 px-3">
     <!-- Producto 1 -->
     <div class="col-md-2 col-sm-6">
       <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
@@ -199,16 +217,71 @@
 
   </div>
 </section>
-<section class="bg-white text-dark py-5">
-    <div class="container">
-      <h3 class="text-center fw-bold mb-4">Tus productos...</h3>
-      <!-- Puedes agregar contenido aquí más adelante -->
-      <p class="text-center">Continuar...</p>
+<section class="categorias-section fondo-hojas text-dark py-4">
+  <h3 class="texto-sobre-fondo text-center fw-bold mb-3">Tus productos favoritos en un solo lugar...</h3>
+  <p class="texto-sobre-fondo text-center mb-4">Comprar por categorías</p>
+
+  <div class="categorias-scroll px-3 d-flex overflow-auto gap-3">
+    
+    <div class="categoria-card text-center">
+      <img src="images/catcarne.png" alt="Carnes" class="img-categoria mb-2">
+      🥩 Carnes
     </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catfruta.png" alt="Frutas" class="img-categoria mb-2">
+      🍎 Frutas
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catverduras.png" alt="Verduras" class="img-categoria mb-2">
+      🥬 Verduras
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catpan.png" alt="Panadería" class="img-categoria mb-2">
+      🍞 Panadería
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catlacteos.png" alt="Lácteos" class="img-categoria mb-2">
+      🥛 Lácteos
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catsnacks.png" alt="Snacks" class="img-categoria mb-2">
+      🍪 Snacks
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catdulces.png" alt="Dulces" class="img-categoria mb-2">
+      🍫 Dulces
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catpastas.png" alt="Pastas" class="img-categoria mb-2">
+      🍝 Pastas
+    </div>
+
+    <div class="categoria-card text-center">
+      <img src="images/catpescados.png" alt="Pescados" class="img-categoria mb-2">
+      🐟 Pescados
+
+    </div>
+
+  </div>
+</section>
   </section>
+
+
+
 
         </div>
       </main>
+      <footer class="text-center text-muted py-3">
+        <small>© 2025 MarketGO. Todos los derechos reservados.</small>
+      </footer>
+      <script src="inicio.js"></script>
 </body>
 </html>
 
