@@ -925,27 +925,101 @@ body.registro {
 
 
 .form-label {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .is-valid {
-  border-color: #28a745;
+    border-color: #28a745;
 }
 
 .is-invalid {
-  border-color: #dc3545;
+    border-color: #dc3545;
 }
 
 .valid-feedback {
-  font-size: 14px;
-  margin-top: 2px;
+    font-size: 14px;
+    margin-top: 2px;
 }
 
 .is-invalid + .valid-feedback {
-  color: red;
+    color: red;
 }
 
 .is-valid + .valid-feedback {
-  color: green;
+    color: green;
+}
+
+
+
+
+
+/* -------------------- Media Queries para dispositivos pequeños -------------------- */
+
+@media (max-width: 768px) {
+  /* Ajustes generales */
+  body {
+      padding: 0;
+      margin: 0;
+  }
+
+  header {
+      padding: 10px;
+      font-size: 1rem;
+  }
+
+  .logo {
+      font-size: 1.2rem;
+  }
+
+  .hero-img {
+      max-width: 300px;
+      transform: translateX(0) translateY(20px);
+  }
+
+  .search-container {
+      width: 100%;
+  }
+
+  #searchInput {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  /* Botones */
+  .btn-recorrer {
+      min-width: 180px;
+      min-height: 50px;
+      font-size: 0.9rem;
+  }
+
+  .btn-llevar-cat img {
+      width: 40px;
+  }
+
+  /* Carrito flotante */
+  #floatingCart {
+      width: 70px;
+      height: 70px;
+  }
+
+  /* Texto grande */
+  .texto2 {
+      font-size: 40px;
+  }
+
+  .texto5 {
+      font-size: 24px;
+  }
+
+  /* Footer */
+  .footer-blanco {
+      font-size: 12px;
+      padding: 10px 0;
+  }
+
+  .icon-redes {
+      width: 24px;
+      margin: 0 5px;
+  }
 }
