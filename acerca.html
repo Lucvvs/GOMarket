@@ -8,158 +8,119 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a2e8c64e62.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="acerca">
   <a href="#" id="floatingCart">
     <img src="images/carrito.png" alt="Carrito de Compras">
     <span id="ContadorArt">0</span>
   </a>
 
   <!-- Modal (Submenú) de vista previa del carrito -->
-<div id="cartSubmenu" class="cart-submenu">
-  <div class="cart-content">
-    <span class="close">&times;</span>
-    <h3>Tu Carrito MarketGO</h3>
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>PRODUCTO</th>
-          <th>PRECIO</th>
-          <th>CANTIDAD</th>
-        </tr>
-      </thead>
-      <tbody id="cartTableBody">
-        <!-- Aquí se generarán dinámicamente los productos del carrito -->
-      </tbody>
-    </table>
-    <!-- Sección de total y botón Pagar -->
-    <div class="cart-footer">
-      <span id="cartTotal">Total: $0.00</span>
-      <a href="pagar.html" class="pay-button">Pagar</a>
+  <div id="cartSubmenu" class="cart-submenu">
+    <div class="cart-content">
+      <span class="close">&times;</span>
+      <h3>Tu Carrito MarketGO</h3>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>PRODUCTO</th>
+            <th>PRECIO</th>
+            <th>CANTIDAD</th>
+          </tr>
+        </thead>
+        <tbody id="cartTableBody">
+          <!-- Productos del carrito generados dinámicamente -->
+        </tbody>
+      </table>
+      <div class="cart-footer">
+        <span id="cartTotal">Total: $0.00</span>
+        <a href="pagar.html" class="pay-button">Pagar</a>
+      </div>
     </div>
   </div>
-</div>
 
-  <section class="seccion-inicial">
-    <header class="text-white p-3 sticky-top">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="d-flex align-items-center gap-3">
-              <h1 class="logo">Market<span class="text-warning">GO</span></h1>
-              <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." />
+  <!-- Header -->
+  <header class="text-white p-3 sticky-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-3">
+            <h1 class="logo">Market<span class="text-warning">GO</span></h1>
+            <div class="search-container position-relative">
+              <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." id="searchInput" autocomplete="off">
+              <div class="autocomplete-suggestions" id="suggestionsBox"></div>
             </div>
           </div>
-          <div class="col-md-6">
-            <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
-              <a href="inicio.html" class="text-white text-decoration-none">Home</a>
-              <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
-              <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-              <a href="login.html">
-                <button class="btn btn-light btn-sm">Iniciar Sesión</button>
-              </a>
-              <a href="registro.html">
-                <button class="btn btn-outline-light btn-sm">Registro</button>
-              </a>
-            </nav>
+        </div>
+        <div class="col-md-6">
+          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
+            <a href="inicio.html" class="text-white text-decoration-none">Home</a>
+            <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+            <a href="login.html">
+              <button class="btn btn-light btn-sm">Iniciar sesión</button>
+            </a>
+            <a href="registro.html">
+              <button class="btn btn-outline-light btn-sm">Registro</button>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="py-5">
+    <div class="container text-center">
+      <h3 class="texto2"><span class="market">Market</span><span class="go">GO</span></h3>
+
+      <p class="texto3">⭐Somos una empresa dedicada a nuestros clientes, llevamos la mejor calidad de cada producto a tu mesa con la seguridad que te mereces. 
+        Tenemos los mejores trabajadores y staff detrás de cada pedido, lo que genera una mayor personalización en la atención que brindamos⭐
+      </p>
+
+      <img src="images/cesta.png" alt="Cesta de Verduras" class="img-fluid animacion-cesta my-4">
+
+      <h3 class="texto3">💭💭💭Clientes felices y sus opiniones💭💭💭</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/five_stars.png" class="card-img-top" alt="5 estrellas">
+            <div class="card-body">
+              <h5 class="card-title">Stephie Gomez</h5>
+              <p class="card-text">Todo llegó en perfecto estado, el delivery bastante rápido con oportunidad de hacer seguimiento al pedido y al repartidor. Sin duda seguiré haciendo pedidos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="images/five_stars.png" class="card-img-top" alt="5 estrellas">
+            <div class="card-body">
+              <h5 class="card-title">Andrea Barra</h5>
+              <p class="card-text">Fácil de manejar y muy sencillo de entender! Soy una mujer que no entiende mucho acerca de la tecnología, pero es una aplicación muy fácil de manejar y recomendable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="images/five_stars.png" class="card-img-top" alt="5 estrellas">
+            <div class="card-body">
+              <h5 class="card-title">Ignacio Nuñez</h5>
+              <p class="card-text">Súper rápido, entregan un buen servicio al consumidor, excelente atención a los detalles y al empaque al momento de recibir. Recomendaré la app a mis conocidos.</p>
+            </div>
           </div>
         </div>
       </div>
-    </header>
-  
-  
-  <main class="py-5" >
-    <div class="container text-center">
-      <h2 class="texto">Información sobre</h2>
-        <h3 class="texto2">MarketGO</h3>
-        <h4 class="texto3">Somos una empresa dedicada a nuestros clientes, llevamos la mejor calidad de cada producto a tu mesa con la seguridad que te mereces. 
-          Tenemos los mejores trabajadores y staff detrás de cada pedido, lo que genera una mayor personlización en la atención que brindamos.
-        </h4>
-        <style>
-          .texto2 {
-      
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 1000;
-        line-height: normal;
-        color: darkorange;
-      }
-        </style>
 
-
-        <style>
-        .texto {
-          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-        }
-      </style>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagen de Cesta de Verduras</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <img src="images/cesta.png" alt="cesta"
-    
- </body>
-</head>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <h1>Clientes felices y sus opiniones:</h1>
-
-  </body>
-</head>
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="images/five_stars.png" class="card-img-top" alt="style.css">
-      <div class="card-body">
-        <h5 class="card-title">Stephie Gomez</h5>
-        <p class="card-text">Todo llegó en perfecto estado, el delivery bastante rápido con oportunidad de hacer seguimiento al pedido y al repartidor. Sin duda seguiré haciendo pedidos.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/five_stars.png" class="card-img-top" alt="style.css">
-      <div class="card-body">
-        <h5 class="card-title">Andrea Barra</h5>
-        <p class="card-text">Facil de manejar y muy sencillo de entender!
-          Soy una mujer  que no entiende mucho acerca de la tecnología ya que cuando era lola no teníamos estos recursos, pero es una aplicación que es muy fácil de manejar y sencillo de entender! Muy recomendable</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/five_stars.png" class="card-img-top" alt="style.css">
-      <div class="card-body">
-        <h5 class="card-title">Ignacio Nuñez</h5>
-        <p class="card-text">Super rápido, entregan un buen servicio al consumidor, excelente atención a los detalles y al empaque al momento de recibir, recomendaré la app con mis conocidos.</p>
-      </div>
-    </div>
-
-  </div>
-      <p>Gracias por visitar nuestra página. Pronto encontrarás más contenido aquí.</p>
+      <p class="texto3">Gracias por visitar nuestra página. Pronto encontrarás más contenido aquí.</p>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="text-center text-muted py-3">
     <small>© 2025 MarketGO. Todos los derechos reservados.</small>
   </footer>
 
   <script src="carrito.js"></script>
-
- </body>
+</body>
 </html>

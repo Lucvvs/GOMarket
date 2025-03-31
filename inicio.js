@@ -36,4 +36,7 @@ function iniciarContador(duracionSegundos) {
 
 // Inicia el contador con 3 horas (3 * 60 * 60 segundos)
 iniciarContador(3 * 60 * 60);
+
+
+
   

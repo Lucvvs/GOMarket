@@ -49,7 +49,10 @@
           <div class="col-md-6">
             <div class="d-flex align-items-center gap-3">
               <h1 class="logo">Market<span class="text-warning">GO</span></h1>
-              <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." />
+              <div class="search-container position-relative">
+                <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." id="searchInput" autocomplete="off">
+                <div class="autocomplete-suggestions" id="suggestionsBox"></div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
@@ -269,7 +272,7 @@
         
         <!-- Sección de Categorías -->
 <section class="categorias-section fondo-hojas text-dark py-4">
-  <h3 class="texto-sobre-fondo text-center fw-bold mb-3">GRANDES MARCAS PRECIOS PEQUEÑOS</h3>
+  <h3 class="texto-sobre-fondo text-center fw-bold mb-3">GRANDES MARCAS - PEQUEÑOS PRECIOS</h3>
   <p class="texto-sobre-fondo text-center mb-4">Buscar por categorías</p>
   <div class="categorias-scroll px-3 d-flex overflow-auto gap-3">
     <a href="categorias.html#carnes" class="categoria-card text-center">
@@ -320,6 +323,7 @@
   </footer>
   <script src="inicio.js"></script>
   <script src="carrito.js"></script>
+  <script src="global.js"></script>
 
 </body>
 </html>

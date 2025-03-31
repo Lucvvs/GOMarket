@@ -16,7 +16,7 @@ body {
   header {
     background-color: #000000c5 !important; /* Fondo verde oscuro o el que tú prefieras */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Opcional: pequeña sombra para destacar */
-    z-index: 999; /* Asegura que esté por sobre otros elementos */
+    z-index: 500s; /* Asegura que esté por sobre otros elementos */
     position: sticky !important;
   }
   
@@ -28,12 +28,15 @@ body {
   .seccion-inicial {
     background-color: #3e6b36;
     color: white;
+    
   }
   
   .logo {
     font-size: 1.8rem;
     font-weight: bold;
   }
+
+  
   
   /* --------------------- HERO --------------------- */
   .hero {
@@ -96,6 +99,69 @@ body {
     opacity: 0.25;
     transform: scale(1.05);
   }
+
+
+
+  /*---------------- buscardor producots*/
+
+/* Contenedor del buscador */
+.search-container {
+  position: relative;
+  width: 400px; /* Aumentado el ancho */
+  margin: 0 auto;
+}
+
+/* Input de búsqueda más amplio y menos redondeado */
+#searchInput {
+  padding: 5px;
+  font-size: 12px;
+  border: 2px solid #28a745;
+  border-radius: 8px; /* Menos redondeado */
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al enfocar el input */
+#searchInput:focus {
+  border-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de sugerencias */
+.autocomplete-suggestions {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background-color: #8fe3a9; /* Fondo verde agua */
+  border-radius: 4px; /* Menos redondeado */
+  max-height: 160px;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}
+
+/* Sugerencias individuales con texto negro */
+.autocomplete-suggestions div {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #000; /* Texto negro */
+  background-color: #8fe3a9; /* Fondo verde agua */
+  transition: background-color 0.2s;
+}
+
+/* Color al pasar el mouse: verde más oscuro */
+.autocomplete-suggestions div:hover {
+  background-color: #4ca76f;
+  color: #fff; /* Texto blanco al resaltar */
+}
+
+/* Resaltar el término coincidente */
+.highlight {
+  color: #28a745;
+  font-weight: bold;
+}
   
   /* --------------------- SERVICIO --------------------- */
   .contenedor-servicio {
@@ -680,8 +746,52 @@ body {
 }
 
 
+/* acerca deeeeee */ 
+
+  /* Frase descriptiva */
+  .texto3 {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #cfcccc;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+.texto2 {
+  font-family: 'Lucida Sans', sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
 
 
+.texto2 .market {
+  color: #e4e4e4;
+}
 
+.texto2 .go {
+  color: #ffae00e7;
+}
+
+
+body.acerca {
+  background-color: #277718;
+}
+
+/* Animación de la cesta de verduras */
+.animacion-cesta {
+  animation: agrandarReducir 2s infinite;
+}
+
+@keyframes agrandarReducir {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
   

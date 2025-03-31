@@ -10,33 +10,35 @@
 </head>
 <body>
   
-  <section class="seccion-inicial">
-    <header class="text-white p-3 sticky-top">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="d-flex align-items-center gap-3">
-              <h1 class="logo">Market<span class="text-warning">GO</span></h1>
-              <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." />
+  <!-- Header -->
+  <header class="text-white p-3 sticky-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-3">
+            <h1 class="logo">Market<span class="text-warning">GO</span></h1>
+            <div class="search-container position-relative">
+              <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." id="searchInput" autocomplete="off">
+              <div class="autocomplete-suggestions" id="suggestionsBox"></div>
             </div>
           </div>
-          <div class="col-md-6">
-            <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
-              <a href="inicio.html" class="text-white text-decoration-none">Home</a>
-              <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
-              <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-              <a href="login.html">
-                <button class="btn btn-light btn-sm">Iniciar Sesión</button>
-              </a>
-              <a href="registro.html">
-                <button class="btn btn-outline-light btn-sm">Registro</button>
-              </a>
-            </nav>
-          </div>
+        </div>
+        <div class="col-md-6">
+          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
+            <a href="inicio.html" class="text-white text-decoration-none">Home</a>
+            <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+            <a href="login.html">
+              <button class="btn btn-light btn-sm">Iniciar sesión</button>
+            </a>
+            <a href="registro.html">
+              <button class="btn btn-outline-light btn-sm">Registro</button>
+            </a>
+          </nav>
         </div>
       </div>
-    </header>
-  </section>
+    </div>
+  </header>
 
   <main class="py-5">
     <div class="container">
@@ -66,5 +68,6 @@
     <small>© 2025 MarketGO. Todos los derechos reservados.</small>
   </footer>
 
+  <script src="global.js"></script>
 </body>
 </html>
