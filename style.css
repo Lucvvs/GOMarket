@@ -469,11 +469,28 @@ body {
       animation: floating 0.5s ease-in-out infinite;
       transition: transform 0.3s ease;
       border: 3px solid #ffffff;
+      
     }
+
+    /* Agregamos el badge del contador */
+#floatingCart #ContadorArt {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
     
     #floatingCart:hover {
-      animation-play-state: paused; /* Pausa la animación al pasar el mouse */
-  transform: none;
+    animation-play-state: paused; /* Pausa la animación al pasar el mouse */
+    transform: none;
     }
     
     #floatingCart img {
@@ -519,6 +536,147 @@ body {
   background: #f57f17;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
   border-color: #f57f17;
+}
+
+
+/* Modal (Submenú) del carrito */
+.cart-submenu {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.cart-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  position: relative;
+  max-height: 80vh;      /* Altura máxima, por ejemplo, 70% de la altura de la ventana */
+  overflow-y: auto;
+}
+
+.cart-content h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #28a745;
+}
+
+/* Botón de cierre del modal */
+.cart-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cart-content .close:hover {
+  color: #000;
+}
+
+/* Tabla del carrito */
+.cart-table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 10px;
+  border-spacing: 0 10px;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Celda de cantidad con botones */
+.quantity-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-cell .quantity {
+  margin: 0 10px;
+  min-width: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Botones para aumentar y disminuir cantidad */
+
+.MenosArtCarrito {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; 
+  background-image: url('images/restar.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  width: 30px;  
+  height: 30px; 
+}
+
+.MasArtCarrito {
+  background: none;                /* Quita el fondo */
+  border: none;                    /* Sin borde */
+  padding: 0;                      /* Sin padding */
+  width: 30px;                     /* Ancho deseado */
+  height: 30px;                    /* Alto deseado */
+  background-image: url('images/sumar.png');
+  background-size: contain;        /* Ajusta la imagen para que se vea completa */
+  background-repeat: no-repeat;    /* Evita repeticiones */
+  cursor: pointer;
+  }
+
+
+
+
+.cart-footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cartTotal {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pay-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+  background-color: #218838;
 }
 
 

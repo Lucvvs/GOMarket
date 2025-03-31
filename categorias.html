@@ -85,9 +85,35 @@ h2 {
   </style>
 </head>
 <body>
-  <a href="carrito.html" id="floatingCart">
+  <a href="#" id="floatingCart">
     <img src="images/carrito.png" alt="Carrito de Compras">
+    <span id="ContadorArt">0</span>
   </a>
+
+   <!-- Modal (Submenú) de vista previa del carrito -->
+<div id="cartSubmenu" class="cart-submenu">
+  <div class="cart-content">
+    <span class="close">&times;</span>
+    <h3>Tu Carrito MarketGO</h3>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>PRODUCTO</th>
+          <th>PRECIO</th>
+          <th>CANTIDAD</th>
+        </tr>
+      </thead>
+      <tbody id="cartTableBody">
+        <!-- Aquí se generarán dinámicamente los productos del carrito -->
+      </tbody>
+    </table>
+    <!-- Sección de total y botón Pagar -->
+    <div class="cart-footer">
+      <span id="cartTotal">Total: $0.00</span>
+      <a href="pagar.html" class="pay-button">Pagar</a>
+    </div>
+  </div>
+</div>
   
   <!-- Sección principal del sitio -->
   <section class="seccion-inicial">
@@ -622,6 +648,7 @@ h2 {
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="categorias.js"></script>
+  <script src="carrito.js"></script>
 </body>
 </html>
 
