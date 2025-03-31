@@ -521,8 +521,8 @@ animation: shrinkBounce 0.4s ease;
 
   #floatingCart {
     position: fixed;
-    bottom: 5vw;       /* Ajusta la posición vertical */
-    left: 2vw;        /* Ajusta la posición horizontal */
+    bottom: 360px;       /* Ajusta la posición vertical */
+    left: 20px;        /* Ajusta la posición horizontal */
     width: 7vw;        /* Ancho del botón, ajusta según necesites */
     height: 7vw;       /* Alto del botón */
     z-index: 1000;
