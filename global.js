@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } else if (menuUsuario) {
         menuUsuario.innerHTML = `
+        <div class="d-flex flex-wrap gap-2 justify-content-end">
             <a href="index.html" class="text-white text-decoration-none">Home</a>
             <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
             <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
