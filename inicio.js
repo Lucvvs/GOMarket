@@ -25,3 +25,8 @@ function iniciarContador(duracionSegundos) {
   
   // Inicia el contador con 3 horas (por ejemplo)
   iniciarContador(3 * 60 * 60);
+
+
+
+
+  

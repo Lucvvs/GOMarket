@@ -238,9 +238,29 @@ body {
 
   .info-producto {
     background-color: #e7960083;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-top: 15px solid #f1e20f;
+
   }
 
+  .btn-llevar {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-llevar img {
+    width: 40px; 
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-llevar:hover img {
+    transform: scale(1.2); 
+  }
 
 /* --------------------- contador --------------------- */
 
@@ -292,11 +312,21 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     opacity: 2.0
+    
+    
   }
   
   .categoria-card:hover {
     transform: scale(1.05);
     background-color: #eafae9;
+  }
+
+  a.categoria-card {
+    text-decoration: none; 
+    color: black
+  
+    
+    
   }
   
   .img-categoria {
@@ -331,6 +361,35 @@ body {
     text-shadow: 2px 2px 5px #000; 
     
   }
+
+  .precio-label {
+    font-weight: bold;
+    margin-right: 55px;
+   
+  }
+
+  .btn-llevar-cat {
+    position: absolute;
+    top: 50%;             
+    right: 2px;        
+    transform: translateY(-50%); 
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+.btn-llevar-cat img {
+  width: 50px; /* Ajusta el tamaño inicial según necesites */
+  transition: transform 0.3s ease;
+  
+}
+
+/* Esta clase se añadirá al hacer click para disparar la animación */
+.btn-llevar-cat.animate img {
+  animation: shrinkBounce 0.4s ease;
+}
   
 
 
@@ -354,13 +413,117 @@ body {
 
 
   @keyframes latido-pausado {
+    0% {transform: scale(0.65);}
+    50% {transform: scale(0.67);}
+    100% {transform: scale(0.65);}
+  }
+
+
+  @keyframes floating {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(15px, 0); }
+    100% { transform: translate(0px, 0); }
+  }
+
+  @keyframes shrinkBounce {
     0% {
-      transform: scale(0.65);
+      transform: scale(1);
     }
     50% {
-      transform: scale(0.67); /* efecto agrandado */
+      transform: scale(0.1); /* Se encoje casi hasta desaparecer */
     }
     100% {
-      transform: scale(0.65);
+      transform: scale(1);
     }
   }
+    
+  .cesta {
+      width: 350px;
+      height: 250px;
+    }
+
+  
+
+     body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+    }
+
+      /* --------------------- carrito --------------------- */
+
+    #floatingCart {
+      position: fixed;
+      bottom: 450px;       /* Ajusta la posición vertical */
+      left: 10px;        /* Ajusta la posición horizontal */
+      width: 100px;        /* Ancho del botón, ajusta según necesites */
+      height: 100px;       /* Alto del botón */
+      z-index: 1000;
+      border-radius: 30%; /* Lo hace redondo */
+      background-color: #000000c0;
+      box-shadow: 0 4px 8px rgba(190, 153, 153, 0.2); /* Sombra para efecto flotante */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: floating 0.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      border: 3px solid #ffffff;
+    }
+    
+    #floatingCart:hover {
+      animation-play-state: paused; /* Pausa la animación al pasar el mouse */
+  transform: none;
+    }
+    
+    #floatingCart img {
+      width: 80%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    #floatingCart:hover img {
+      transform: scale(1.5); /* Aumenta el tamaño de la imagen en hover */
+    }
+
+
+
+      /* --------------------- recorrer pasillos --------------------- */
+
+  
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');  .btn-recorrer {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-size: 1.1rem;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+  background: linear-gradient(135deg, #fbb80d, #f9a825);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+  min-width: 240px;
+  min-height: 60px;
+}
+
+/* Hover */
+.btn-recorrer:hover {
+  background: linear-gradient(135deg, #39fa1388, #39fa1388);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Al hacer clic */
+.btn-recorrer:active {
+  transform: scale(0.96);
+  background: #f57f17;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #f57f17;
+}
+
+
+
+
+
+
+  
