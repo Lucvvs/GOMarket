@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a2e8c64e62.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="contacto">
+  
   <a href="#" id="floatingCart">
     <img src="images/carrito.png" alt="Carrito de Compras">
     <span id="ContadorArt">0</span>
@@ -52,8 +53,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
-            <a href="index.html" class="text-white text-decoration-none">Home</a>
+          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2" id="menuUsuario">            <a href="index.html" class="text-white text-decoration-none">Home</a>
             <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
             <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
             <a href="login.html">
@@ -69,19 +69,19 @@
   </header>
 
   <!-- contactoo -->
-  <section class="seccion-contacto py-5">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-4">Contáctanos</h2>
-      <form class="bg-light p-4 rounded shadow-sm" id="contactForm" novalidate autocomplete="off">
+<section class="seccion-contacto py-5">
+  <div class="container text-center">
+    <h2 class="text-center fw-bold mb-4 texto-contacto">
+      <span class="contacto-parte1">Contác</span><span class="contacto-parte2">tanos📲</span>
+    </h2>
 
-
-
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" 
-                 required pattern="^[A-Za-z]{3,20}$" 
-                 title="El nombre debe tener entre 3 y 20 letras, sin espacios ni símbolos.">
-        </div>
+    <form class="bg-light p-4 rounded shadow-sm" id="contactForm" novalidate autocomplete="off">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre" 
+               required pattern="^[A-Za-z]{3,20}$" 
+               title="El nombre debe tener entre 3 y 20 letras, sin espacios ni símbolos.">
+      </div>
 
 
         <div class="mb-3">
@@ -129,8 +129,15 @@
 
 
 
-  <footer class="text-center text-muted py-3">
-    <small>© 2025 MarketGO. Todos los derechos reservados.</small>
+  <footer class="text-center text-muted py-3 footer-blanco">
+    <div>
+      <small>© 2025 MarketGO. Todos los derechos reservados.</small>
+      <div class="social-icons mt-2">
+        <img src="images/facebook.png" alt="Facebook" class="icon-redes">
+        <img src="images/twitter.png" alt="Twitter" class="icon-redes">
+        <img src="images/instagram.png" alt="Instagram" class="icon-redes">
+      </div>
+    </div>
   </footer>
 
 

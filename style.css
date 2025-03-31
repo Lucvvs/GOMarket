@@ -775,10 +775,13 @@ body {
   color: #ffae00e7;
 }
 
-
 body.acerca {
   background-color: #277718;
 }
+
+
+
+
 
 /* Animación de la cesta de verduras */
 .animacion-cesta {
@@ -795,3 +798,154 @@ body.acerca {
 }
 
   
+
+/* ------ FORMULARIO SEIZE */
+#contactForm {
+  max-width: 500px; /* Define un ancho máximo para el formulario */
+  margin: 0 auto; /* Centra el formulario */
+}
+
+#contactForm input,
+#contactForm textarea {
+  font-size: 14px; /* Ajusta el tamaño de los campos */
+  padding: 6px; /* Reduce el espacio interno */
+}
+
+#contactForm .btn {
+  font-size: 16px; /* Ajusta el tamaño del botón */
+}
+
+
+
+body.contacto {
+  background-color: #277718;
+}
+
+.texto5 {
+  color: #e4e4e4;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra intensa */
+  border: 2px solid #000; /* Borde negro */
+  padding: 5px; /* Espacio interno para que el texto no quede pegado al borde */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  background-color: #333333bb; /* Fondo oscuro para resaltar el texto */
+  display: inline-block; /* Evitar que ocupe todo el ancho */
+  
+}
+
+#contactForm label {
+  text-align: left;
+  display: block; /* Para que el label ocupe todo el ancho */
+  font-weight: bold; /* Opcional: para resaltar los textos */
+  margin-bottom: 5px; /* Espacio entre el label y el campo */
+}
+
+
+.texto-contacto .contacto-parte1 {
+  color: #ffae00e7; /* Naranja */
+}
+
+.texto-contacto .contacto-parte2 {
+  color: #ffffff; /* Verde */
+}
+
+
+/* --- FORMAT FOOTER*/
+
+.footer-blanco {
+  background-color: #ffffffe0; /* Fondo blanco */
+  color: #333333; /* Texto oscuro */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Sombra superior */
+  border-top: 2px solid #e0e0e0; /* Línea superior */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+.footer-blanco small {
+  font-weight: bold; /* Negrita para el texto pequeño */
+}
+
+.social-icons {
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.icon-redes {
+  width: 32px; /* Tamaño de las imágenes */
+  margin: 0 10px; /* Espaciado lateral */
+  transition: transform 0.3s ease; /* Transición para el hover */
+  border-radius: 30%; /* Bordes completamente redondeados */
+}
+
+.icon-redes:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
+
+
+/* ----- inico y registro ------ */
+
+
+body.login {
+  background-color: #277718;
+}
+
+body.registro {
+  background-color: #277718;
+}
+
+.texto-iniciar-sesion {
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+}
+
+.texto-iniciar-sesion .iniciar {
+  color: #ffffff; /* Blanco */
+}
+
+.texto-iniciar-sesion .sesion {
+  color: #ffae00e7; /* Naranja */
+}
+
+
+.texto-crear-cuenta {
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+}
+
+.texto-crear-cuenta .crear, .texto-crear-cuenta .cuenta {
+  color: #ffae00e7; /* Naranja */
+}
+
+.texto-crear-cuenta .una {
+  color: #ffffff; /* Blanco */
+}
+
+
+
+.form-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.is-valid {
+  border-color: #28a745;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.valid-feedback {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.is-invalid + .valid-feedback {
+  color: red;
+}
+
+.is-valid + .valid-feedback {
+  color: green;
+}

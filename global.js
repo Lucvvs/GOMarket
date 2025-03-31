@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       { name: "Zanahorias", section: "verduras" },
       { name: "Tomates", section: "verduras" }, 
       
-      { name: "Lechuga", section: "verduras" },
-      { name: "Zanahorias", section: "verduras" },
-      { name: "Tomates", section: "verduras" }, 
 
       { name: "Leche Entera", section: "lacteos" },
       { name: "Queso Fresco", section: "lacteos" },
@@ -28,21 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
       { name: "Croissant", section: "panaderia" },
       { name: "Baguette", section: "panaderia" },
       
-      { name: "Agua Mineral", section: "Bebidas" },
-      { name: "Jugo Natural", section: "Bebidas" },
-      { name: "Bebida Lata", section: "Bebidas" },
+      { name: "Agua Mineral", section: "bebestibles" },
+      { name: "Jugo Natural", section: "bebestibles" },
+      { name: "Bebida Lata", section: "bebestibles" },
 
-      { name: "Papas Fritas", section: "Snacks" },
-      { name: "Galletas", section: "Snacks" },
-      { name: "Doritos", section: "Snacks" },
+      { name: "Papas Fritas", section: "snacks" },
+      { name: "Galletas", section: "snacks" },
+      { name: "Doritos", section: "snacks" },
 
-      { name: "Jabón Líquido", section: "Aseo" },
-      { name: "Desinfectante", section: "Aseo" },
-      { name: "Limpiavidrios", section: "Aseo" },
+      { name: "Jabón Líquido", section: "aseo" },
+      { name: "Desinfectante", section: "aseo" },
+      { name: "Limpiavidrios", section: "aseo" },
 
       { name: "Alimento para Perros", section: "mascotas" },
-      { name: "Alimento para Gatos", section: "Mascotas" },
-      { name: "Juguete para Mascotas", section: "Mascotas" },
+      { name: "Alimento para Gatos", section: "mascotas" },
+      { name: "Juguete para Mascotas", section: "mascotas" },
 
 
     
@@ -78,3 +75,41 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuUsuario = document.getElementById('menuUsuario');
+    const usuarioActivo = localStorage.getItem('usuarioActivo');
+
+    if (menuUsuario && usuarioActivo) {
+        menuUsuario.innerHTML = `
+            <a href="index.html" class="text-white text-decoration-none">Home</a>
+            <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+            <span class="text-white">¡Hola <span style="color: #ffae00e7;">${usuarioActivo}!</span></span>
+            <button id="cerrarSesion" class="btn btn-outline-light btn-sm">Cerrar Sesión</button>
+        `;
+
+        const cerrarSesionBtn = document.getElementById('cerrarSesion');
+        cerrarSesionBtn.addEventListener('click', () => {
+            localStorage.removeItem('usuarioActivo');
+            alert("🔒Sesión cerrada exitosamente!🔒");
+            window.location.href = "index.html";
+        });
+    } else if (menuUsuario) {
+        menuUsuario.innerHTML = `
+            <a href="index.html" class="text-white text-decoration-none">Home</a>
+            <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+            <a href="login.html">
+                <button class="btn btn-light btn-sm">Iniciar sesión</button>
+            </a>
+            <a href="registro.html">
+                <button class="btn btn-outline-light btn-sm">Registro</button>
+            </a>
+        `;
+    }
+});

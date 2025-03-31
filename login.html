@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a2e8c64e62.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="login">
   
   <!-- Header -->
   <header class="text-white p-3 sticky-top">
@@ -24,8 +24,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
-            <a href="index.html" class="text-white text-decoration-none">Home</a>
+          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2" id="menuUsuario">            <a href="index.html" class="text-white text-decoration-none">Home</a>
             <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
             <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
             <a href="login.html">
@@ -42,32 +41,43 @@
 
   <main class="py-5">
     <div class="container">
-      <h2 class="text-center fw-bold mb-4">Iniciar Sesión</h2>
+      <h2 class="text-center fw-bold mb-4 texto-iniciar-sesion">
+        <span class="iniciar">Iniciar</span> <span class="sesion">Sesión</span>
+      </h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form class="bg-light p-4 rounded shadow-sm">
+          <form class="bg-light p-4 rounded shadow-sm" id="loginForm" novalidate autocomplete="off">
             <div class="mb-3">
-              <label for="correo" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" required>
+              <label for="username" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required pattern="^[A-Za-z0-9]{5,15}$" title="Entre 5 y 15 caracteres alfanuméricos, sin espacios.">
             </div>
             <div class="mb-3">
-              <label for="contrasena" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="contrasena" placeholder="********" required>
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password" placeholder="********" required pattern="^\S{6,12}$" title="Entre 6 y 12 caracteres, sin espacios.">
             </div>
             <div class="d-grid">
               <button type="submit" class="btn btn-success">Entrar</button>
             </div>
             <p class="text-center mt-3 mb-0">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            <p id="loginMessage" class="text-danger mt-2" style="display: none;">Nombre de usuario o contraseña incorrectos.</p>
           </form>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="text-center text-muted py-3">
-    <small>© 2025 MarketGO. Todos los derechos reservados.</small>
+  <footer class="text-center text-muted py-3 footer-blanco">
+    <div>
+      <small>© 2025 MarketGO. Todos los derechos reservados.</small>
+      <div class="social-icons mt-2">
+        <img src="images/facebook.png" alt="Facebook" class="icon-redes">
+        <img src="images/twitter.png" alt="Twitter" class="icon-redes">
+        <img src="images/instagram.png" alt="Instagram" class="icon-redes">
+      </div>
+    </div>
   </footer>
 
   <script src="global.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
