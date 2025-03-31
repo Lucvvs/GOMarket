@@ -27,7 +27,7 @@
         </tr>
       </thead>
       <tbody id="cartTableBody">
-        <!-- Aquí se generarán dinámicamente los productos del carrito -->
+       
       </tbody>
     </table>
     <!-- Sección de total y botón Pagar -->
@@ -43,34 +43,40 @@
   <!-- Sección principal del sitio -->
   <section class="seccion-inicial">
     <!-- Header -->
-    <header class="text-white p-3 sticky-top">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="d-flex align-items-center gap-3">
-              <h1 class="logo">Market<span class="text-warning">GO</span></h1>
-              <div class="search-container position-relative">
-                <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." id="searchInput" autocomplete="off">
-                <div class="autocomplete-suggestions" id="suggestionsBox"></div>
-              </div>
+  <header class="text-white p-3 sticky-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-3">
+            <h1 class="logo">Market<span class="text-warning">GO</span></h1>
+            <div class="search-container position-relative">
+              <input type="text" class="form-control form-control-sm w-75" placeholder="Buscar productos..." id="searchInput" autocomplete="off">
+              <div class="autocomplete-suggestions" id="suggestionsBox"></div>
             </div>
           </div>
-          <div class="col-md-6">
-            <nav id="menuUsuario" class="d-flex justify-content-end align-items-center flex-nowrap gap-2">
-                <a href="index.html" class="text-white text-decoration-none">Home</a>
-                <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
-                <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-            </nav>
         </div>
+        <div class="col-md-6">
+          <nav class="d-flex justify-content-end align-items-center flex-nowrap gap-2" id="menuUsuario">            
+            <a href="index.html" class="text-white text-decoration-none">Home</a>
+            <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+            <a href="login.html">
+              <button class="btn btn-light btn-sm">Iniciar sesión</button>
+            </a>
+            <a href="registro.html">
+              <button class="btn btn-outline-light btn-sm">Registro</button>
+            </a>
+          </nav>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
     
     <!-- Sección Hero -->
     <section class="hero text-white py-5">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-6 position-relative">
+          <div class="col-12 col-md-6 position-relative">
             <svg class="svg-fondo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1842 1745" preserveAspectRatio="xMidYMid meet">
               <path d="M1842 870.36C1842 1407.29 1488.2 1745 923.214 1745C358.231 1745 0 1407.29 0 870.36C0 333.428 358.231 0 923.214 0C1488.2 0 1842 333.428 1842 870.36ZM0 870.36C0 1519.07 461.797 1745 923.214 1745C1384.63 1745 1842 1501.09 1842 870.36C1842 239.627 1384.63 0 923.214 0C283.718 0 0 431.853 0 870.36Z" fill="#F0FEEE"/>
             </svg>
@@ -86,12 +92,12 @@
               segundos.
             </h2>
             <!-- Botón Posicionado -->
-            <button onclick="window.location.href='categorias.html'" class="btn btn-recorrer position-absolute z-1" style="top: 160px; left: 970px;">
+            <button onclick="window.location.href='categorias.html'" class="btn btn-recorrer mt-3 mx-auto d-block d-md-inline" style="position: relative;">
               Recorrer Pasillos...
             </button>
           </div>
           
-          <div class="col-md-6 position-relative text-center">
+          <div class="col-12 col-md-6 position-relative text-center">
             <img src="images/fondofrutas.png" alt="Fondo frutas" class="img-fondo-frutas" />
             <img src="images/frutas1.png" alt="Frutas y verduras" class="img-fluid hero-img" />
           </div>
@@ -101,21 +107,21 @@
     
     <!-- Main -->
     <main class="bg-white text-dark">
-      <div class="container py-5">
+      
         <!-- Título de Servicio -->
         <h2 class="text-center fw-bold mb-5">Nuestro Servicio</h2>
         
         <!-- Sección con imagen + características -->
         <div class="row align-items-center mb-5">
           <!-- Columna izquierda: imagen -->
-          <div class="col-md-6 position-relative text-center">
+          <div class="col-12 col-md-6 position-relative text-center">
             <div class="contenedor-servicio position-relative">
               <img src="images/fondoservicio.png" alt="Fondo decorativo" class="img-fondo-servicio">
               <img src="images/servicio.png" alt="Imagen del servicio" class="img-servicio position-relative">
             </div>
           </div>
           <!-- Columna derecha: características -->
-          <div class="col-md-6">
+          <div class="col-12 col-md-6">
             <div class="d-flex flex-column gap-3">
               <div class="caracteristica text-center">
                 <i class="fas fa-bolt fa-2x mb-2 text-success"></i>
@@ -142,48 +148,48 @@
         </div>
         
         <!-- Ofertas Flash -->
-        <h2 class="titulo-ofertas text-center">Ofertas Flash</h2>
-        <!-- Contador de tiempo -->
-        <div class="contador-oferta d-flex justify-content-center gap-3 mb-4">
-          <div class="cuadro-contador text-center">
-            <span id="horas">00</span>
-            <div class="label">HORAS</div>
-          </div>
-          <div class="cuadro-contador text-center">
-            <span id="minutos">00</span>
-            <div class="label">MINUTOS</div>
-          </div>
-          <div class="cuadro-contador text-center">
-            <span id="segundos">00</span>
-            <div class="label">SEGUNDOS</div>
-          </div>
-        </div>
-        
+<h2 class="titulo-ofertas text-center">Ofertas Flash</h2>
+<!-- Contador de tiempo -->
+<div class="contador-oferta d-flex flex-wrap justify-content-center gap-3 mb-4"> <!-- MODIFICADO -->
+  <div class="cuadro-contador text-center flex-grow-1"> <!-- MODIFICADO -->
+    <span id="horas">00</span>
+    <div class="label">HORAS</div>
+  </div>
+  <div class="cuadro-contador text-center flex-grow-1"> <!-- MODIFICADO -->
+    <span id="minutos">00</span>
+    <div class="label">MINUTOS</div>
+  </div>
+  <div class="cuadro-contador text-center flex-grow-1"> <!-- MODIFICADO -->
+    <span id="segundos">00</span>
+    <div class="label">SEGUNDOS</div>
+  </div>
+</div>
         <!-- Sección de Ofertas Flash -->
-        <section class="fondo-ofertas text-white py-4">
-          <div class="row justify-content-center g-4 mx-0 px-3">
-            <!-- Producto 1 -->
-            <div class="col-md-2 col-sm-6">
+<section class="fondo-ofertas text-white py-4">
+  <div class="container-fluid"> <!-- CAMBIO: Añadido container-fluid para ancho completo -->
+      <div class="row justify-content-center g-4 mx-0 px-2"> <!-- CAMBIO: mx-0 y px-2 para reducir márgenes -->
+          <!-- Producto 1 -->
+          <div class="col-6 col-sm-6 col-md-2 text-center"> <!-- MANTENIDO -->
               <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
-                <div class="badge-oferta">OFERTA</div>
-                <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
-                  <img src="images/carne2.jpg" alt="Pollo Entero" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
-                </div>
-                <div class="info-producto p-2">
-                  <h6 class="fw-bold text-center mb-1">Pollo Entero</h6>
-                  <p class="text-center mb-1 text-muted text-decoration-line-through">$8.990</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$4.990</p>
-                    <button class="btn-llevar">
-                      <img src="images/Llevar.png" alt="Agregar al carrito">
-                    </button>
+                  <div class="badge-oferta">OFERTA</div>
+                  <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
+                      <img src="images/carne2.jpg" alt="Pollo Entero" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
                   </div>
-                </div>
+                  <div class="info-producto p-2">
+                      <h6 class="fw-bold text-center mb-1">Pollo Entero</h6>
+                      <p class="text-center mb-1 text-muted text-decoration-line-through">$8.990</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$4.990</p>
+                          <button class="btn-llevar">
+                              <img src="images/Llevar.png" alt="Agregar al carrito">
+                          </button>
+                      </div>
+                  </div>
               </div>
-            </div>
+          </div>
             
             <!-- Producto 2 -->
-            <div class="col-md-2 col-sm-6">
+            <div class="col-6 col-sm-6 col-md-2 text-center"> <!-- MODIFICADO -->
               <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
                 <div class="badge-oferta">OFERTA</div>
                 <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
@@ -203,113 +209,109 @@
             </div>
             
             <!-- Producto 3 -->
-            <div class="col-md-2 col-sm-6">
-              <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
-                <div class="badge-oferta">OFERTA</div>
-                <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
-                  <img src="images/snack2.jpg" alt="Galletas Toddy" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
-                </div>
-                <div class="info-producto p-2">
-                  <h6 class="fw-bold text-center mb-1">Galletas Toddy</h6>
-                  <p class="text-center mb-1 text-muted text-decoration-line-through">$1.290</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$1.000</p>
-                    <button class="btn-llevar">
-                      <img src="images/Llevar.png" alt="Agregar al carrito">
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Producto 4 -->
-            <div class="col-md-2 col-sm-6">
-              <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
-                <div class="badge-oferta">OFERTA</div>
-                <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
-                  <img src="images/lacteo1.jpg" alt="Leche Entera 1L" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
-                </div>
-                <div class="info-producto p-2">
-                  <h6 class="fw-bold text-center mb-1">Leche Entera 1L</h6>
-                  <p class="text-center mb-1 text-muted text-decoration-line-through">$1.390</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$1.000</p>
-                    <button class="btn-llevar">
-                      <img src="images/Llevar.png" alt="Agregar al carrito">
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Producto 5 -->
-            <div class="col-md-2 col-sm-6">
-              <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
-                <div class="badge-oferta">OFERTA</div>
-                <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
-                  <img src="images/fruta3.jpg" alt="Naranjas" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
-                </div>
-                <div class="info-producto p-2">
-                  <h6 class="fw-bold text-center mb-1">Naranjas KG</h6>
-                  <p class="text-center mb-1 text-muted text-decoration-line-through">$1.790</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$1.200</p>
-                    <button class="btn-llevar">
-                      <img src="images/Llevar.png" alt="Agregar al carrito">
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="col-6 col-sm-6 col-md-2 text-center"> <!-- MODIFICADO -->
+  <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
+    <div class="badge-oferta">OFERTA</div>
+    <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
+      <img src="images/snack2.jpg" alt="Galletas Toddy" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
+    </div>
+    <div class="info-producto p-2">
+      <h6 class="fw-bold text-center mb-1">Galletas Toddy</h6>
+      <p class="text-center mb-1 text-muted text-decoration-line-through">$1.290</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$1.000</p>
+        <button class="btn-llevar">
+          <img src="images/Llevar.png" alt="Agregar al carrito">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Producto 4 -->
+<div class="col-6 col-sm-6 col-md-2 text-center"> <!-- MODIFICADO -->
+  <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
+    <div class="badge-oferta">OFERTA</div>
+    <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
+      <img src="images/lacteo1.jpg" alt="Leche Entera 1L" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
+    </div>
+    <div class="info-producto p-2">
+      <h6 class="fw-bold text-center mb-1">Leche Entera 1L</h6>
+      <p class="text-center mb-1 text-muted text-decoration-line-through">$1.390</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$1.000</p>
+        <button class="btn-llevar">
+          <img src="images/Llevar.png" alt="Agregar al carrito">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Producto 5 -->
+<div class="col-6 col-sm-6 col-md-2 text-center"> <!-- MODIFICADO -->
+  <div class="oferta-card bg-white text-dark rounded h-100 overflow-hidden d-flex flex-column">
+    <div class="badge-oferta">OFERTA</div>
+    <div class="img-wrapper d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
+      <img src="images/fruta3.jpg" alt="Naranjas" class="img-producto img-fluid" style="max-height: 100%; object-fit: cover;">
+    </div>
+    <div class="info-producto p-2">
+      <h6 class="fw-bold text-center mb-1">Naranjas KG</h6>
+      <p class="text-center mb-1 text-muted text-decoration-line-through">$1.790</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="fw-bold text-success fs-5 mb-0"><span class="precio-label"></span>$1.200</p>
+        <button class="btn-llevar">
+          <img src="images/Llevar.png" alt="Agregar al carrito">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
         </section>
         
         <!-- Sección de Categorías -->
 <section class="categorias-section fondo-hojas text-dark py-4">
   <h3 class="texto-sobre-fondo text-center fw-bold mb-3">GRANDES MARCAS - PEQUEÑOS PRECIOS</h3>
   <p class="texto-sobre-fondo text-center mb-4">Buscar por categorías</p>
-  <div class="categorias-scroll px-3 d-flex overflow-auto gap-3">
-    <a href="categorias.html#carnes" class="categoria-card text-center">
+  <div class="categorias-scroll px-3 d-flex flex-wrap justify-content-center gap-3"> <!-- MODIFICADO -->
+    <a href="categorias.html#carnes" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catcarne.png" alt="Carnes" class="img-categoria mb-2">
       🥩 Carnes
     </a>
-    <a href="categorias.html#frutas" class="categoria-card text-center">
+    <a href="categorias.html#frutas" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catfruta.png" alt="Frutas" class="img-categoria mb-2">
       🍎 Frutas
     </a>
-    <a href="categorias.html#verduras" class="categoria-card text-center">
+    <a href="categorias.html#verduras" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catverduras.png" alt="Verduras" class="img-categoria mb-2">
       🥬 Verduras
     </a>
-    <a href="categorias.html#panaderia" class="categoria-card text-center">
+    <a href="categorias.html#panaderia" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catpan.png" alt="Panadería" class="img-categoria mb-2">
       🍞 Panadería
     </a>
-    <a href="categorias.html#lacteos" class="categoria-card text-center">
+    <a href="categorias.html#lacteos" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catlacteos.png" alt="Lacteos" class="img-categoria mb-2">
       🥛 Lácteos
     </a>
-    <a href="categorias.html#snacks" class="categoria-card text-center">
+    <a href="categorias.html#snacks" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catsnacks.png" alt="Snacks" class="img-categoria mb-2">
       🍪 Snacks
     </a>
-    <a href="categorias.html#aseo" class="categoria-card text-center">
+    <a href="categorias.html#aseo" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/cataseo.png" alt="Aseo" class="img-categoria mb-2">
       🧼 Art. Aseo
     </a>
-    <a href="categorias.html#mascotas" class="categoria-card text-center">
+    <a href="categorias.html#mascotas" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catmascotas.png" alt="Mascotas" class="img-categoria mb-2">
       🐶 Mascotas
     </a>
-    <a href="categorias.html#bebestibles" class="categoria-card text-center">
+    <a href="categorias.html#bebestibles" class="categoria-card text-center col-6 col-sm-4 col-md-2"> <!-- MODIFICADO -->
       <img src="images/catpescados.png" alt="Bebestibles" class="img-categoria mb-2">
       🧃 Bebestibles
     </a>
   </div>
 </section>
-      </div>
-    </main>
-  </section>
   
   <!-- Footer -->
   <footer class="text-center text-muted py-3 footer-blanco">
