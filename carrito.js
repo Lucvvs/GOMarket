@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Cargar el carrito desde sessionStorage o iniciar vacío.
+
   let cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || {};
   
-  // Elementos del DOM
+
   const floatingCart = document.getElementById('floatingCart');
   const cartSubmenu = document.getElementById('cartSubmenu');
   const closeBtn = document.querySelector('.cart-content .close');
   const cartTableBody = document.getElementById('cartTableBody');
   const contadorArt = document.getElementById('ContadorArt');
 
-  // Función para actualizar el contador global.
+  // Función para actualizar el contador globa
   function updateGlobalCount() {
     const totalCount = Object.values(cartItems).reduce((sum, item) => sum + item.quantity, 0);
     contadorArt.textContent = totalCount;
@@ -23,15 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const item = cartItems[key];
       const row = document.createElement('tr');
 
-      // Celda de nombre
+   
       const nameCell = document.createElement('td');
       nameCell.textContent = item.name;
 
-      // Celda de precio
+ 
       const priceCell = document.createElement('td');
       priceCell.textContent = item.price;
 
-      // Celda de cantidad con botones
+
       const quantityCell = document.createElement('td');
       quantityCell.className = 'quantity-cell';
 
@@ -77,11 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTotalPrice();
     updateGlobalCount();
-    // Guarda el estado en sessionStorage
+
+
+    // Guarda el estado en sessionStorag
     sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
   }
 
-  // Función para actualizar el total (ya definida)
+  // Función para actualizar el total 
   function updateTotalPrice() {
     let total = 0;
     Object.keys(cartItems).forEach(key => {
@@ -98,14 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cartTotal').textContent = "Total: " + formatter.format(total);
   }
 
-  // Listener para abrir el modal del carrito.
+
   floatingCart.addEventListener('click', (e) => {
     e.preventDefault();
     cartSubmenu.style.display = 'block';
     updateCartTable();
   });
 
-  // Listener para cerrar el modal.
+
   closeBtn.addEventListener('click', () => {
     cartSubmenu.style.display = 'none';
   });
@@ -116,26 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Evento para agregar producto (desde categorías)
+  // Evento para agregar producto 
   const addButtons = document.querySelectorAll('.btn-llevar-cat, .btn-llevar');
 addButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     e.stopPropagation();
-    // Busca el contenedor más cercano que contenga la información del producto.
-    // Si no encuentra un '.card-body', intenta con '.oferta-card'
+    
     const container = button.closest('.card-body') || button.closest('.oferta-card');
     if (container) {
-      // Intenta obtener el nombre del producto.
-      // En categorías se espera que esté en un elemento con clase '.card-title'
-      // En ofertas, en tu HTML aparece dentro de un <h6>, así que lo buscamos también.
+      
       const productNameElem = container.querySelector('.card-title') || container.querySelector('h6');
-      // Para el precio, busca el elemento con clase '.precio' o, en ofertas, 
-      // podrías usar otro selector si es necesario (por ejemplo, el <p> que contiene "$4.990").
+    
       const priceElem = container.querySelector('.precio') || container.querySelector('.fw-bold.text-success');
       if (productNameElem && priceElem) {
         const productName = productNameElem.textContent.trim();
         const productPrice = priceElem.textContent.trim();
-        // Si el producto ya existe, aumenta la cantidad; si no, lo agrega.
+   
         if (cartItems[productName]) {
           cartItems[productName].quantity += 1;
         } else {
@@ -152,7 +150,6 @@ addButtons.forEach(button => {
     });
   });
 
-  // Llama a updateGlobalCount() al final, después de configurar los listeners,
-  // para que el contador se actualice con el estado almacenado.
+
   updateGlobalCount();
 });

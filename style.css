@@ -14,9 +14,9 @@ html, body {
 
 
 header {
-  background-color: #000000c5 !important; /* Fondo verde oscuro o el que tú prefieras */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Opcional: pequeña sombra para destacar */
-  z-index: 500s; /* Asegura que esté por sobre otros elementos */
+  background-color: #000000c5 !important; /* Fondo verde oscuro */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* ombra  */
+  z-index: 500s; /* sobre otros elementos */
   position: sticky !important;
 }
 
@@ -107,16 +107,16 @@ nav {
 /* Contenedor del buscador */
 .search-container {
 position: relative;
-width: 90%; /* Aumentado el ancho */
+width: 90%; /* ancho */
 margin: 0 auto;
 }
 
-/* Input de búsqueda más amplio y menos redondeado */
+/* Input de búsqueda */
 #searchInput {
 padding: 5px;
 font-size: 12px;
 border: 2px solid #28a745;
-border-radius: 8px; /* Menos redondeado */
+border-radius: 8px; /*  redondeado */
 outline: none;
 width: 100%;
 transition: all 0.3s ease;
@@ -134,8 +134,8 @@ position: absolute;
 top: 105%;
 left: 0;
 right: 0;
-background-color: #8fe3a9; /* Fondo verde agua */
-border-radius: 4px; /* Menos redondeado */
+background-color: #8fe3a9; 
+border-radius: 4px; 
 max-height: 160px;
 overflow-y: auto;
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -146,15 +146,15 @@ z-index: 10000;
 .autocomplete-suggestions div {
 padding: 8px 12px;
 cursor: pointer;
-color: #000; /* Texto negro */
-background-color: #8fe3a9; /* Fondo verde agua */
+color: #000; 
+background-color: #8fe3a9; 
 transition: background-color 0.2s;
 }
 
-/* Color al pasar el mouse: verde más oscuro */
+/* Color al pasar el mous */
 .autocomplete-suggestions div:hover {
 background-color: #4ca76f;
-color: #fff; /* Texto blanco al resaltar */
+color: #fff; /* Texto blanco */
 }
 
 /* Resaltar el término coincidente */
@@ -196,7 +196,7 @@ font-weight: bold;
   padding: 2% 3%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 0.9rem;
-  max-height: 10vh;   /* 🔥 Altura fija para que todas midan igual */
+  max-height: 10vh;   
   max-width: 80%;
   display: flex;
   flex-direction: column;
@@ -447,12 +447,11 @@ a.categoria-card {
 }
 
 .btn-llevar-cat img {
-width: 50px; /* Ajusta el tamaño inicial según necesites */
+width: 50px; /* tamaño inicial  */
 transition: transform 0.3s ease;
 
 }
 
-/* Esta clase se añadirá al hacer click para disparar la animación */
 .btn-llevar-cat.animate img {
 animation: shrinkBounce 0.4s ease;
 }
@@ -496,7 +495,7 @@ animation: shrinkBounce 0.4s ease;
     transform: scale(1);
   }
   50% {
-    transform: scale(0.1); /* Se encoje casi hasta desaparecer */
+    transform: scale(0.1); /* Se encoje c */
   }
   100% {
     transform: scale(1);
@@ -521,12 +520,12 @@ animation: shrinkBounce 0.4s ease;
 
   #floatingCart {
     position: fixed;
-    bottom: 360px;       /* Ajusta la posición vertical */
-    left: 20px;        /* Ajusta la posición horizontal */
-    width: 7vw;        /* Ancho del botón, ajusta según necesites */
-    height: 7vw;       /* Alto del botón */
+    bottom: 360px;      
+    left: 20px;        
+    width: 7vw;     
+    height: 7vw;      
     z-index: 1000;
-    border-radius: 30%; /* Lo hace redondo */
+    border-radius: 30%; 
     background-color: #000000c0;
     box-shadow: 0 4px 8px rgba(190, 153, 153, 0.2); /* Sombra para efecto flotante */
     display: flex;
@@ -555,7 +554,7 @@ font-size: 12px;
 }
   
   #floatingCart:hover {
-  animation-play-state: paused; /* Pausa la animación al pasar el mouse */
+  animation-play-state: paused; 
   transform: none;
   }
   
@@ -566,7 +565,7 @@ font-size: 12px;
   }
   
   #floatingCart:hover img {
-    transform: scale(1.5); /* Aumenta el tamaño de la imagen en hover */
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen*/
   }
 
 
@@ -607,7 +606,7 @@ border-color: #f57f17;
 
 /* Modal (Submenú) del carrito */
 .cart-submenu {
-display: none; /* Oculto por defecto */
+display: none;
 position: fixed;
 z-index: 2000;
 left: 0;
@@ -627,7 +626,7 @@ border: 2px solid #28a745;
 border-radius: 10px;
 box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 position: relative;
-max-height: 80vh;      /* Altura máxima, por ejemplo, 70% de la altura de la ventana */
+max-height: 80vh;    
 overflow-y: auto;
 }
 
@@ -702,14 +701,14 @@ height: 30px;
 }
 
 .MasArtCarrito {
-background: none;                /* Quita el fondo */
-border: none;                    /* Sin borde */
-padding: 0;                      /* Sin padding */
-width: 30px;                     /* Ancho deseado */
-height: 30px;                    /* Alto deseado */
+background: none;              
+border: none;                  
+padding: 0;                    
+width: 30px;                   
+height: 30px;                   
 background-image: url('images/sumar.png');
-background-size: contain;        /* Ajusta la imagen para que se vea completa */
-background-repeat: no-repeat;    /* Evita repeticiones */
+background-size: contain;        
+background-repeat: no-repeat;    
 cursor: pointer;
 }
 
@@ -767,8 +766,8 @@ text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .custom-btn {
-  font-size: 0.875rem; /* Ajuste de tamaño */
-  padding: 0.375rem 0.75rem; /* Tamaño compacto */
+  font-size: 0.875rem; 
+  padding: 0.375rem 0.75rem; 
 }
 
 .texto2 .market {
@@ -805,18 +804,18 @@ animation: agrandarReducir 2s infinite;
 
 /* ------ FORMULARIO SEIZE */
 #contactForm {
-max-width: 500px; /* Define un ancho máximo para el formulario */
-margin: 0 auto; /* Centra el formulario */
+max-width: 500px; 
+margin: 0 auto; 
 }
 
 #contactForm input,
 #contactForm textarea {
-font-size: 1rem; /* Ajusta el tamaño de los campos */
-padding: 6px; /* Reduce el espacio interno */
+font-size: 1rem; 
+padding: 6px; 
 }
 
 #contactForm .btn {
-font-size: 16px; /* Ajusta el tamaño del botón */
+font-size: 16px; 
 }
 
 
@@ -829,60 +828,60 @@ background-color: #277718;
 color: #e4e4e4;
 font-weight: bold;
 font-size: 40px;
-text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra intensa */
-border: 2px solid #000; /* Borde negro */
-padding: 5px; /* Espacio interno para que el texto no quede pegado al borde */
-border-radius: 8px; /* Bordes ligeramente redondeados */
-background-color: #333333bb; /* Fondo oscuro para resaltar el texto */
-display: inline-block; /* Evitar que ocupe todo el ancho */
+text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
+border: 2px solid #000; /* Bord */
+padding: 5px; 
+border-radius: 8px; 
+background-color: #333333bb; 
+display: inline-block; 
 
 }
 
 #contactForm label {
 text-align: left;
-display: block; /* Para que el label ocupe todo el ancho */
-font-weight: bold; /* Opcional: para resaltar los textos */
-margin-bottom: 5px; /* Espacio entre el label y el campo */
+display: block; 
+font-weight: bold; 
+margin-bottom: 5px; 
 }
 
 
 .texto-contacto .contacto-parte1 {
-color: #ffae00e7; /* Naranja */
+color: #ffae00e7; 
 }
 
 .texto-contacto .contacto-parte2 {
-color: #ffffff; /* Verde */
+color: #ffffff; 
 }
 
 
 /* --- FORMAT FOOTER*/
 
 .footer-blanco {
-background-color: #ffffffe0; /* Fondo blanco */
-color: #333333; /* Texto oscuro */
-padding: 20px 0; /* Espaciado superior e inferior */
-box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Sombra superior */
-border-top: 2px solid #e0e0e0; /* Línea superior */
-font-size: 16px; /* Tamaño del texto */
+background-color: #ffffffe0; 
+color: #333333; 
+padding: 20px 0; 
+box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); 
+border-top: 2px solid #e0e0e0; 
+font-size: 16px; 
 }
 
 .footer-blanco small {
-font-weight: bold; /* Negrita para el texto pequeño */
+font-weight: bold; 
 }
 
 .social-icons {
-margin-top: 10px; /* Espaciado superior */
+margin-top: 10px; 
 }
 
 .icon-redes {
-width: 32px; /* Tamaño de las imágenes */
-margin: 0 10px; /* Espaciado lateral */
-transition: transform 0.3s ease; /* Transición para el hover */
-border-radius: 30%; /* Bordes completamente redondeados */
+width: 32px; 
+margin: 0 10px; 
+transition: transform 0.3s ease; 
+border-radius: 30%; 
 }
 
 .icon-redes:hover {
-transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+transform: scale(1.2); 
 }
 
 
@@ -915,15 +914,15 @@ color: #ffae00e7; /* Naranja */
 .texto-crear-cuenta {
 font-weight: bold;
 font-size: 2.5rem;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .texto-crear-cuenta .crear, .texto-crear-cuenta .cuenta {
-color: #ffae00e7; /* Naranja */
+color: #ffae00e7; 
 }
 
 .texto-crear-cuenta .una {
-color: #ffffff; /* Blanco */
+color: #ffffff;
 }
 
 
@@ -958,7 +957,7 @@ color: #ffffff; /* Blanco */
 
 
 
-/* -------------------- Media Queries para dispositivos pequeños -------------------- */
+/* -------------------- Media Queries para dispositivs pequeños -------------------- */
 
 @media (max-width: 768px) {
 /* Ajustes generales */
@@ -1029,7 +1028,7 @@ header {
 
 @media (max-width: 768px) {
   .hero h2 {
-      font-size: 1.5rem; /* Reducir el tamaño del texto en pantallas pequeñas */
+      font-size: 1.5rem; 
       text-align: center;
   }
 
@@ -1041,7 +1040,7 @@ header {
 
 
   .svg-fondo, .svg-fondo-amarillo {
-      display: none; /* Ocultar los SVG en pantallas pequeñas si siguen causando problemas */
+     /* display: none; */  
   }
 
   .hero-img {
