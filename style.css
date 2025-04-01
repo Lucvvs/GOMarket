@@ -1042,10 +1042,6 @@ header {
 
 
 
-  .svg-fondo, .svg-fondo-amarillo {
-     /* display: none; */  
-  }
-
   .hero-img {
       transform: none;
       margin: 0 auto;
@@ -1059,5 +1055,11 @@ header {
   }
 }
 
+@media (max-width: 576px) {
+  .btn-llevar {
+      font-size: 0.8rem;
+      padding: 0.4rem;
+  }
+}
 
 }
