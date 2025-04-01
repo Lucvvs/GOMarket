@@ -14,29 +14,30 @@
     <span id="ContadorArt">0</span>
   </a>
 
-  <!-- Modal (Submenú) de vista previa del carrito -->
-  <div id="cartSubmenu" class="cart-submenu">
-    <div class="cart-content">
-      <span class="close">&times;</span>
-      <h3>Tu Carrito MarketGO</h3>
-      <table class="cart-table">
-        <thead>
-          <tr>
-            <th>PRODUCTO</th>
-            <th>PRECIO</th>
-            <th>CANTIDAD</th>
-          </tr>
-        </thead>
-        <tbody id="cartTableBody">
-          <!-- Productos del carrito generados dinámicamente -->
-        </tbody>
-      </table>
-      <div class="cart-footer">
-        <span id="cartTotal">Total: $0.00</span>
-        <a href="pagar.html" class="pay-button">Pagar</a>
-      </div>
-    </div>
+ <!-- Modal (Submenú) de vista previa del carrito -->
+<div id="cartSubmenu" class="cart-submenu">
+  <div class="cart-content">
+    <span class="close">&times;</span>
+    <h3>Tu Carrito MarketGO</h3>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>PRODUCTO</th>
+          <th>PRECIO</th>
+          <th>CANTIDAD</th>
+        </tr>
+      </thead>
+      <tbody id="cartTableBody">
+       
+      </tbody>
+    </table>
+    <!-- Sección de total y botón Pagar -->
+    <div class="cart-footer">
+      <span id="cartTotal">Total: $0.00</span>
+      <button class="pay-button" onclick="realizarPago()">Pagar</button>
   </div>
+  </div>
+</div>
 
   <!-- Header -->
   <header class="text-white p-3 sticky-top">

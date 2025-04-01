@@ -1,8 +1,8 @@
 function iniciarContador(duracionSegundos) {
-  // Verifica si ya se guardó la hora de inicio en sessionStorage.
+ 
   let startTime = sessionStorage.getItem('startTime');
   if (!startTime) {
-    // Si no existe, la establece con la hora actual (en milisegundos).
+
     startTime = Date.now();
     sessionStorage.setItem('startTime', startTime);
   } else {
@@ -14,9 +14,9 @@ function iniciarContador(duracionSegundos) {
   const segundos = document.getElementById('segundos');
 
   function actualizarContador() {
-    // Calcula los segundos transcurridos desde que el usuario entró a la página.
+    // Calcula los segundos transcurridos 
     const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
-    // Calcula el tiempo restante restando lo transcurrido a la duración total.
+
     let tiempoRestante = duracionSegundos - elapsedSeconds;
     if (tiempoRestante < 0) {
       tiempoRestante = 0;
@@ -34,7 +34,7 @@ function iniciarContador(duracionSegundos) {
   setInterval(actualizarContador, 1000);
 }
 
-// Inicia el contador con 3 horas (3 * 60 * 60 segundos)
+// Inicia el contador  con3 horas
 iniciarContador(3 * 60 * 60);
 
 

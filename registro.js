@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (formValido) {
-                // Obtener los datos del formulario
+              
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
             
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     password: password
                 };
             
-                // Guardar en localStorage usando el nombre de usuario como clave
+                // Guardar en localStorage 
                 localStorage.setItem(username, JSON.stringify(userData));
             
                 alert("✅¡Registro exitoso! Ahora puedes iniciar sesión en MarketGO✅");

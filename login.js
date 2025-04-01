@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert("🛒¡Bienvenido! A comprar!🛒");
                     loginMessage.style.display = "none";
     
-                    // Guardar el nombre de usuario en el almacenamiento local
+                    // Guardar el nombre de usuario 
                     localStorage.setItem("usuarioActivo", username);
     
-                    // Redirigir al home después de iniciar sesión
+                    // Redirigir al home 
                     window.location.href = "index.html";
                 } else {
                     loginMessage.textContent = "Contraseña incorrecta.";

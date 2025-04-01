@@ -121,24 +121,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function realizarPago() {
-  // Mostrar el mensaje de pago realizado
-  alert("💰✅Pago realizado con éxito💰✅");
 
-  // Limpiar el carrito en sessionStorage
+  const cartTotal = document.getElementById('cartTotal');
+  if (cartTotal) {
+   
+    const totalValue = parseFloat(cartTotal.textContent.replace('Total: $', '').replace(',', '.'));
+
+    // Verificar si hay articulos o no
+    if (totalValue === 0.0) {
+      alert("❌🛒 Pago incorrecto, no hay artículos en su carrito 🛒❌");
+      return;
+    }
+  }
+
+  alert("💰✅ Pago realizado con éxito 💰✅");
+
+  // Limpiar caarrttio
   sessionStorage.removeItem('cartItems');
 
-  // Actualizar el contador del carrito a cero
   const contadorArt = document.getElementById('ContadorArt');
   if (contadorArt) contadorArt.textContent = '0';
 
-  // Limpiar la tabla del carrito si está abierta
+
   const cartTableBody = document.getElementById('cartTableBody');
   if (cartTableBody) cartTableBody.innerHTML = '';
 
-  // Actualizar el total a cero
-  const cartTotal = document.getElementById('cartTotal');
+
   if (cartTotal) cartTotal.textContent = 'Total: $0.00';
 
-  // Redirigir a la página de inicio
   window.location.href = "index.html";
 }

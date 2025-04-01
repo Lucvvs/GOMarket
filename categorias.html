@@ -14,7 +14,6 @@ body {
   margin: 0;
   padding: 0;
 }
-/* Estilos para la sección de categorías */
 main {
   background-color: #c79415;
 }
@@ -51,19 +50,19 @@ h2 {
   color: #000000; 
   font-weight: 620;
   font-size: 0.8rem;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra  */
 
 }
 
 .precio {
-  font-size: 1.5rem;               /* Tamaño ya establecido */
-  color: #FFEB3B;                  /* Amarillo, puedes cambiar el código si lo deseas */
+  font-size: 1.5rem;               /* Tamaño  */
+  color: #FFEB3B;                  
   text-shadow: 
     6px 6px 10px rgba(0, 0, 0, 1),
     0px 0px 3px rgba(0, 0, 0, 1);
   
-  display: inline-block;           /* Para que el borde se ajuste al contenido */
-  padding: 2px 4px;                /* Espacio interno para mejorar la legibilidad */
+  display: inline-block;    
+  padding: 2px 4px;           
 }
   
 
@@ -79,7 +78,7 @@ h2 {
 
 .card-title {
   font-size: 22px;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9); /* Sombra más intensa */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
   color: #ffffff; 
 
 }
@@ -107,14 +106,14 @@ h2 {
         </tr>
       </thead>
       <tbody id="cartTableBody">
-        <!-- Aquí se generarán dinámicamente los productos del carrito -->
+       
       </tbody>
     </table>
     <!-- Sección de total y botón Pagar -->
     <div class="cart-footer">
       <span id="cartTotal">Total: $0.00</span>
-      <a href="pagar.html" class="pay-button">Pagar</a>
-    </div>
+      <button class="pay-button" onclick="realizarPago()">Pagar</button>
+  </div>
   </div>
 </div>
   
