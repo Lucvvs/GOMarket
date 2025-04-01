@@ -101,11 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } else if (menuUsuario) {
         menuUsuario.innerHTML = `
-        <div class="d-flex flex-wrap gap-2 justify-content-end">
-            <a href="index.html" class="text-white text-decoration-none">Home</a>
-            <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
-            <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-            <div class="d-flex gap-2">
+        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-end align-items-center">
+    <a href="index.html" class="text-white text-decoration-none">Home</a>
+    <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
+    <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
+    <div class="d-flex gap-2 flex-shrink-0">
         <a href="login.html">
             <button class="btn btn-light btn-sm">Iniciar sesión</button>
         </a>
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="btn btn-outline-light btn-sm">Registro</button>
         </a>
     </div>
+</div>
         `;
     }
 });
