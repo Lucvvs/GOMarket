@@ -105,12 +105,39 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="index.html" class="text-white text-decoration-none">Home</a>
             <a href="acerca.html" class="text-white text-decoration-none">Acerca</a>
             <a href="contacto.html" class="text-white text-decoration-none">Contacto</a>
-            <a href="login.html">
-                <button class="btn btn-light btn-sm">Iniciar sesión</button>
-            </a>
-            <a href="registro.html">
-                <button class="btn btn-outline-light btn-sm">Registro</button>
-            </a>
+            <div class="d-flex gap-2">
+        <a href="login.html">
+            <button class="btn btn-light btn-sm">Iniciar sesión</button>
+        </a>
+        <a href="registro.html">
+            <button class="btn btn-outline-light btn-sm">Registro</button>
+        </a>
+    </div>
         `;
     }
 });
+
+
+
+function realizarPago() {
+  // Mostrar el mensaje de pago realizado
+  alert("💰✅Pago realizado con éxito💰✅");
+
+  // Limpiar el carrito en sessionStorage
+  sessionStorage.removeItem('cartItems');
+
+  // Actualizar el contador del carrito a cero
+  const contadorArt = document.getElementById('ContadorArt');
+  if (contadorArt) contadorArt.textContent = '0';
+
+  // Limpiar la tabla del carrito si está abierta
+  const cartTableBody = document.getElementById('cartTableBody');
+  if (cartTableBody) cartTableBody.innerHTML = '';
+
+  // Actualizar el total a cero
+  const cartTotal = document.getElementById('cartTotal');
+  if (cartTotal) cartTotal.textContent = 'Total: $0.00';
+
+  // Redirigir a la página de inicio
+  window.location.href = "index.html";
+}
